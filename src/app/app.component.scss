@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+}
+
+.header {
+  height: 80%;
+}
+
+.footer {
+  flex: 1 1 auto;
+}

@@ -1,0 +1,87 @@
+.registration-container{
+  max-width: 1280px;
+  width: 100%;
+  align-items: center;
+  max-height: 760px;
+  height: 100%;
+  margin: auto auto 60px;
+}
+.registration-form{
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 12px;
+  height: 680px;
+  width: 366px;
+  margin-left: 457px;
+  margin-top:20px;
+}
+.registration-text{
+  margin-top: 24px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+  color: #4965F9;
+}
+.registration-form-group{
+  margin-left: 24px;
+}
+input{
+  border: none;
+  border-bottom: 0.5px solid #303030;
+  width: 300px;
+}
+.require{
+  color: red;
+  text-decoration: none;
+}
+label{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+::placeholder{
+  color: black;
+  opacity: 0.6;
+}
+.notation{
+  width: 294px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #303030;
+
+  opacity: 0.6;
+}
+.notation-center{
+  width: 117px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #303030;
+  opacity: 0.6;
+  text-decoration: none;
+}
+button{
+  width: 318px;
+  height: 40px;
+  color: white;
+
+  border-radius: 6px;
+}
+button.confirm{
+  background: #4965F9;
+}
+button.registration-button{
+  background: #66D26A;
+}
+.form-element{
+  margin-bottom: 20px;
+}
+.form-element-num{
+  margin-bottom: 10px;
+}

@@ -1,0 +1,45 @@
+<div class="registration-container">
+  <form class="registration-form">
+
+    <div class="registration-form-group">
+      <div class="form-element">
+        <p class="registration-text">Регистрация</p>
+      </div>
+      <div class="form-element">
+        <label for="inputName">Имя</label><a class="require">*</a><br>
+        <input id="inputName" name="name" placeholder="Введите имя"/>
+      </div>
+      <div class="form-element">
+        <label for="inputSurname">Фамилия</label><a class="require">*</a><br>
+        <input id="inputSurname" name="surname" placeholder="Введите фамилию"/>
+      </div>
+      <div class="form-element">
+        <label for="inputPassword">Пароль</label><a class="require">*</a><br>
+        <input id="inputPassword" name="password" placeholder="Введите пароль"/>
+      </div>
+      <div class="form-element">
+        <label for="confirmPassword">Повторите пароль</label><a class="require">*</a><br>
+        <input id="confirmPassword" name="confirm_password" placeholder="Повторите пароль"/>
+      </div>
+      <div class="form-element-num">
+        <label for="phone">Номер телефона</label><a class="require">*</a><br>
+        <input id="phone" name="phone" placeholder="+7" type="text"/>
+      </div>
+      <div class="form-element">
+        <p class="notation">Введите свой номер телефона. На указанный
+          номер будет отправлено SMS с кодом.</p>
+        <button class="confirm form-element">
+          Подтвердить
+        </button>
+      </div>
+      <div>
+        <button class="registration-button form-element" type="submit">
+          Регистрация
+        </button>
+      </div>
+      <div class="form-element" style="text-align: center">
+        <a class="notation-center">Уже есть аккаунт?</a><a href="/login" style="margin-left: 6px">Войти</a>
+      </div>
+    </div>
+  </form>
+</div>
