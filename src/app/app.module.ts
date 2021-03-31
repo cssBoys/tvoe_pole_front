@@ -7,8 +7,8 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/registration/registration.component';
-import { EditComponent } from './components/edit/edit.component';
-import { BookingComponent } from './components/booking/booking.component';
+import {EditComponent} from './components/edit/edit.component';
+import { MainComponent } from './shared/main/main.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { BookingComponent } from './components/booking/booking.component';
     LoginComponent,
     RegistrationComponent,
     EditComponent,
-    BookingComponent
+    MainComponent
   ],
   imports: [
     BrowserModule,

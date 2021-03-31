@@ -1,0 +1,27 @@
+body {
+  max-height: 700px;
+  background-image: url("~/assets/images/main.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+}
+
+p {
+  width: 505px;
+  font-size: 48px;
+  line-height: 60px;
+  color: #FDFDFD;
+  margin: 180px 0 0 70px;
+}
+
+input {
+  width: 483px;
+  height: 78px;
+  margin: 46px 0 0 70px;
+  box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #C2C2C2;
+}
