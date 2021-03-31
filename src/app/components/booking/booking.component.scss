@@ -1,0 +1,161 @@
+.container{
+  width: 100%;
+  align-items: center;
+  max-height: 525px;
+  height: 100%;
+  margin: 20px auto 50px;
+}
+.links{
+  margin-bottom: 20px;
+}
+a{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-decoration: none;
+
+}
+a.disabled-link{
+  color: #303030;
+  opacity: 0.7;
+}
+a.link{
+  color: #303030;
+}
+.booking-text{
+  margin-top: 20px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+
+}
+.booking-info{
+  width: 1140px;
+  height: 363px;
+  background: #FDFDFD;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 12px;
+
+
+}
+.flex-container{
+  display: flex;
+  justify-content: flex-end;
+}
+.flex-item{
+  margin: 24px 24px;
+
+}
+.booking-date{
+  width: 610px;
+  border-bottom: 0.5px solid #303030;
+  margin-bottom: 20px;
+}
+
+.date{
+  margin-left: 160px;
+
+}
+.time{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 45px;
+}
+.date{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+
+  color: #303030;
+
+  opacity: 0.6;
+}
+.booking-info-element{
+  margin-top: 20px;
+}
+.info-field{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #303030;
+
+  opacity: 0.6;
+  text-align: end;
+}
+.description-field{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+}
+td{
+  padding-right: 100px;
+  padding-bottom: 20px;
+}
+.last-row{
+  padding-bottom: 30px;
+}
+.last-column{
+  padding-right: 0px;
+}
+.booking-edit{
+  width: 149px;
+  height: 30px;
+  left: 0px;
+  top: 0px;
+
+
+
+  background: #66D26A;
+
+
+  border: 1px solid #66D26A;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-align: center;
+
+
+
+  color: #FDFDFD;
+}
+.booking-reject{
+  width: 149px;
+  height: 30px;
+  left: 0px;
+  top: 0px;
+  background: #FDFDFD;
+  border: 0.5px solid #C2C2C2;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-align: center;
+  color: #848484;
+}
+.icon-place{
+
+}
+.booking-success{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+}
+.booking-sms-notification{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 19px;
+  text-align: center;
+  color: #848484;
+}
+.icon{
+  margin-left: 100px;
+}
+
