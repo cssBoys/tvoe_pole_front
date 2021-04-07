@@ -9,6 +9,8 @@ import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import {EditComponent} from './components/edit/edit.component';
 import { MainComponent } from './shared/main/main.component';
+import {BookingComponent} from './components/booking/booking.component';
+import { BookingHistoryComponent } from './components/booking-history/booking-history.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { MainComponent } from './shared/main/main.component';
     LoginComponent,
     RegistrationComponent,
     EditComponent,
-    MainComponent
+    MainComponent,
+    BookingComponent,
+    BookingHistoryComponent
   ],
   imports: [
     BrowserModule,
