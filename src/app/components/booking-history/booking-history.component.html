@@ -1,0 +1,77 @@
+<div class="container">
+  <div class="links">
+    <a class="disabled-link">Главная / </a><a class="link">История бронирований</a>
+  </div>
+  <div class="fieleds-container">
+    <div class="top-slider">
+      <p>История бронирований</p>
+      <div class="slider">
+
+      <div *ngFor="let field of fields" class="slider-item">
+        <div class="item-container">
+          <p class="date">{{field.date}}</p>
+          <table>
+            <tr>
+              <td>
+                <img class="field-image" src="assets/images/{{field.image}}">
+              </td>
+              <td>
+                <div >
+                  <p class="field-name">{{field.name}}</p>
+                  <p class="field-info">{{field.description}}</p>
+                  <p class="field-info">{{field.address}}</p>
+                </div>
+
+              </td>
+            </tr>
+
+
+          </table>
+          <button class="details">Подробнее</button>
+
+        </div>
+
+
+
+
+      </div>
+      </div>
+
+    </div>
+    <div class="bottom-slider">
+      <p>Предыдущие бронирования</p>
+      <div class="slider">
+
+        <div *ngFor="let field of fields" class="slider-item">
+          <div class="item-container">
+            <p class="date">{{field.date}}</p>
+            <table>
+              <tr>
+                <td>
+                  <img class="field-image" src="assets/images/{{field.image}}">
+                </td>
+                <td>
+                  <div >
+                    <p class="field-name">{{field.name}}</p>
+                    <p class="field-info">{{field.description}}</p>
+                    <p class="field-info">{{field.address}}</p>
+                  </div>
+
+                </td>
+              </tr>
+
+
+            </table>
+            <button class="details">Подробнее</button>
+
+          </div>
+
+
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
