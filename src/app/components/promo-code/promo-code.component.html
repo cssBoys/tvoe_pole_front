@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="links">
+    <a class="disabled-link">Главная / </a><a class="link">Промокоды</a>
+  </div>
+  <div class="promo-codes-container">
+    <p>Промокоды</p>
+    <ng-container *ngIf="isExists(); else empty">
+    <div class="promo-codes-flex">
+
+
+
+      <div *ngFor="let promocode of promocodes" class="flex-item">
+        <div  class="item-container">
+          <p>Промокод</p>
+          <input class="promo-code" disabled value="{{promocode.code}}"><br>
+          <button class="promo-code-button">Использовать</button>
+        </div>
+      </div>
+
+
+
+    </div>
+    </ng-container>
+    <ng-template #empty >
+      <div class="empty">
+        <p class="empty-item"><img src="assets/icons/info.svg" class="info">У вас пока что нет промокодов</p>
+      </div>
+
+    </ng-template>
+
+  </div>
+
+</div>

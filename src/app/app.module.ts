@@ -11,6 +11,7 @@ import {EditComponent} from './components/edit/edit.component';
 import { MainComponent } from './shared/main/main.component';
 import {BookingComponent} from './components/booking/booking.component';
 import { BookingHistoryComponent } from './components/booking-history/booking-history.component';
+import { PromoCodeComponent } from './components/promo-code/promo-code.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BookingHistoryComponent } from './components/booking-history/booking-hi
     EditComponent,
     MainComponent,
     BookingComponent,
-    BookingHistoryComponent
+    BookingHistoryComponent,
+    PromoCodeComponent
   ],
   imports: [
     BrowserModule,

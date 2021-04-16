@@ -5,13 +5,15 @@ import {LoginComponent} from './components/login/login.component';
 import {EditComponent} from './components/edit/edit.component';
 import {BookingComponent} from './components/booking/booking.component';
 import {BookingHistoryComponent} from './components/booking-history/booking-history.component';
+import {PromoCodeComponent} from './components/promo-code/promo-code.component';
 
 const routes: Routes = [
   { path: 'registration', component: RegistrationComponent },
   { path: 'login', component: LoginComponent},
   { path: 'edit', component: EditComponent},
   { path: 'booking', component: BookingComponent},
-  { path: 'booking-history', component: BookingHistoryComponent}
+  { path: 'booking-history', component: BookingHistoryComponent},
+  { path: 'promo-codes', component: PromoCodeComponent}
 ];
 
 @NgModule({
