@@ -12,6 +12,8 @@ import { MainComponent } from './shared/main/main.component';
 import {BookingComponent} from './components/booking/booking.component';
 import { BookingHistoryComponent } from './components/booking-history/booking-history.component';
 import { PromoCodeComponent } from './components/promo-code/promo-code.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
+import { CheckComponent } from './components/check/check.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { PromoCodeComponent } from './components/promo-code/promo-code.component
     MainComponent,
     BookingComponent,
     BookingHistoryComponent,
-    PromoCodeComponent
+    PromoCodeComponent,
+    ContactsComponent,
+    CheckComponent
   ],
   imports: [
     BrowserModule,
