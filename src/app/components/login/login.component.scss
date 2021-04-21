@@ -8,7 +8,6 @@
 }
 .login-form{
   width: 366px;
-  height: 372px;
   margin: auto;
 
   /* clrs / White */
@@ -21,7 +20,7 @@
   border-radius: 12px;
 }
 .login-text{
-  margin-top: 24px;
+  margin: 24px 0 28px;
 
   font-style: normal;
   font-weight: 500;
@@ -54,14 +53,19 @@ button{
   width: 318px;
   height: 40px;
   color: white;
-
   border-radius: 6px;
+
 }
 button.confirm{
   background: #4965F9;
+  border: none;
+
+  &:disabled {
+      background-color: #BDC7FC;
+      cursor: not-allowed;
+  }
 }
 .notation-center{
-
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -69,4 +73,11 @@ button.confirm{
   color: #303030;
   opacity: 0.6;
   text-decoration: none;
+}
+
+.validation {
+  font-size: 13px;
+  line-height: 15px;
+  color: #EB0531;
+  margin-top: 16px;
 }

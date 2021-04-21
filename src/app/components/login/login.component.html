@@ -1,27 +1,68 @@
 <div class="login-container">
-  <form class="login-form">
-    <div class="login-form-group">
-      <div class="form-element">
-        <p class="login-text">Вход</p>
-      </div>
-      <div class="form-element">
+  <div class="login-form">
+    <form class="login-form-group" [formGroup]="form" (ngSubmit)="submit()">
+
+      <h2 class="login-text">Вход</h2>
+
+      <div
+        class="form-element"
+        [ngClass]="{invalid:form.get('phone').touched && form.get('phone').invalid}"
+      >
         <label for="phone">Номер телефона</label><br>
-        <input id="phone" name="phone" placeholder="+7" type="text"/>
+        <input
+          inputmode="numeric"
+          id="phone"
+          name="phone"
+          type="tel"
+          prefix="+7 "
+          mask="000 000 00 00"
+          formControlName="phone"
+          autocomplete="one-time-code"
+        >
+        <div
+          class="validation"
+          *ngIf="form.get('phone').touched && form.get('phone').invalid">
+          <p *ngIf="form.get('phone').errors.required">
+            Введите номер
+          </p>
+          <p *ngIf="form.get('phone').errors.minlength">
+            Номер должен быть не менее {{form.get('phone').errors.minlength.requiredLength}} символов
+          </p>
+        </div>
       </div>
-      <div class="form-element">
-        <label for="inputPassword">Пароль</label><br>
-        <input id="inputPassword" name="password" placeholder="Введите пароль"/>
+
+      <div
+        class="form-element"
+        [ngClass]="{invalid:form.get('password').touched && form.get('password').invalid}"
+      >
+        <label for="password">Пароль</label><br>
+        <input id="password" type="password" placeholder="Введите пароль" formControlName="password">
+        <div
+          class="validation"
+          *ngIf="form.get('password').touched && form.get('password').invalid"
+        >
+          <p *ngIf="form.get('password').errors.required">
+            Введите пароль
+          </p>
+          <p *ngIf="form.get('password').errors.minlength">
+            Пароль должен быть не менее {{form.get('password').errors.minlength.requiredLength}} символов
+          </p>
+        </div>
       </div>
-      <div class="form-element">
-        <button class="confirm form-element">
-          Вход
-        </button>
-      </div>
+
+      <button
+        type="submit"
+        class="confirm form-element"
+        [disabled]="form.invalid"
+      >
+        Вход
+      </button>
+
       <div class="form-element" style="text-align: center">
         <a class="notation-center">Нет аккаунта?</a><a href="/registration" style="margin-left: 6px">Зарегистрироваться</a>
       </div>
 
-    </div>
+    </form>
 
-  </form>
+  </div>
 </div>

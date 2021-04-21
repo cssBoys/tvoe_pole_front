@@ -1,42 +1,124 @@
 <div class="registration-container">
-  <form class="registration-form">
+  <form class="registration-form" [formGroup]="registrationForm" (ngSubmit)="submitForm()">
 
     <div class="registration-form-group">
+
+        <h2 class="registration-text">Регистрация</h2>
+
       <div class="form-element">
-        <p class="registration-text">Регистрация</p>
+        <label for="name">Имя</label><a class="require">*</a><br>
+        <input id="name" name="name" placeholder="Введите имя" formControlName="name">
+
+        <div
+          class="validation"
+          *ngIf="registrationForm.get('name').touched && registrationForm.get('name').invalid">
+          <p
+            *ngIf="registrationForm.get('name').errors.required"
+          >
+            Введите ваше Имя
+          </p>
+        </div>
       </div>
+
       <div class="form-element">
-        <label for="inputName">Имя</label><a class="require">*</a><br>
-        <input id="inputName" name="name" placeholder="Введите имя"/>
+        <label for="surname">Фамилия</label><a class="require">*</a><br>
+        <input id="surname" name="surname" placeholder="Введите фамилию" formControlName="surname">
+
+        <div
+          class="validation"
+          *ngIf="registrationForm.get('surname').touched && registrationForm.get('surname').invalid">
+          <p
+            *ngIf="registrationForm.get('surname').errors.required"
+          >
+            Введите вашу Фамилию
+          </p>
+        </div>
       </div>
+
       <div class="form-element">
-        <label for="inputSurname">Фамилия</label><a class="require">*</a><br>
-        <input id="inputSurname" name="surname" placeholder="Введите фамилию"/>
+        <label for="email">Почта</label><a class="require">*</a><br>
+        <input id="email" name="email" placeholder="Введите @mail" formControlName="email">
+
+        <div
+          class="validation"
+          *ngIf="registrationForm.get('email').touched && registrationForm.get('email').invalid">
+          <p
+            *ngIf="registrationForm.get('email').errors.required"
+          >
+            Введите ваш @mail
+          </p>
+        </div>
       </div>
+
       <div class="form-element">
-        <label for="inputPassword">Пароль</label><a class="require">*</a><br>
-        <input id="inputPassword" name="password" placeholder="Введите пароль"/>
+        <label for="password">Пароль</label><a class="require">*</a><br>
+        <input id="password" name="password" placeholder="Введите пароль" formControlName="password">
+
+        <div
+          class="validation"
+          *ngIf="registrationForm.get('password').touched && registrationForm.get('password').invalid"
+        >
+          <p *ngIf="registrationForm.get('password').errors.required">
+            Введите пароль
+          </p>
+          <p *ngIf="registrationForm.get('password').errors.minlength">
+            Пароль должен быть не менее {{registrationForm.get('password').errors.minlength.requiredLength}} символов
+          </p>
+        </div>
+
       </div>
+
       <div class="form-element">
         <label for="confirmPassword">Повторите пароль</label><a class="require">*</a><br>
-        <input id="confirmPassword" name="confirm_password" placeholder="Повторите пароль"/>
+        <input id="confirmPassword" name="confirmPassword" placeholder="Повторите пароль" formControlName="confirmPassword">
+
+        <div
+          class="validation"
+          *ngIf="registrationForm.get('confirmPassword').touched && registrationForm.get('confirmPassword').invalid"
+        >
+          <p *ngIf="registrationForm.get('confirmPassword').errors.required">
+            Повторите пароль
+          </p>
+
+          <p *ngIf="f.confirmPassword.errors.confirmedValidator">
+            Пароли не совпадают
+          </p>
+        </div>
       </div>
+
       <div class="form-element-num">
         <label for="phone">Номер телефона</label><a class="require">*</a><br>
-        <input id="phone" name="phone" placeholder="+7" type="text"/>
+        <input
+          id="phone"
+          inputmode="numeric"
+          name="phone"
+          type="tel"
+          prefix="+7 "
+          mask="000 000 00 00"
+          formControlName="phone"
+          autocomplete="one-time-code"
+        >
+
+        <div
+          class="validation"
+          *ngIf="registrationForm.get('phone').touched && registrationForm.get('phone').invalid">
+          <p *ngIf="registrationForm.get('phone').errors.required">
+            Введите номер
+          </p>
+          <p *ngIf="registrationForm.get('phone').errors.minlength">
+            Номер должен быть не менее {{registrationForm.get('phone').errors.minlength.requiredLength}} символов
+          </p>
+        </div>
+
       </div>
+
       <div class="form-element">
-        <p class="notation">Введите свой номер телефона. На указанный
-          номер будет отправлено SMS с кодом.</p>
-        <button class="confirm form-element">
-          Подтвердить
-        </button>
+        <p class="notation">
+          Введите свой номер телефона. На указанный номер будет отправлено SMS с кодом.
+        </p>
+        <button type="submit" class="confirm" [disabled]="registrationForm.invalid">Подтвердить</button>
       </div>
-      <div>
-        <button class="registration-button form-element" type="submit">
-          Регистрация
-        </button>
-      </div>
+
       <div class="form-element" style="text-align: center">
         <a class="notation-center">Уже есть аккаунт?</a><a href="/login" style="margin-left: 6px">Войти</a>
       </div>

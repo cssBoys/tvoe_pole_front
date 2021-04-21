@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {AuthService} from '../../services/auth.service';
+import {ConfirmedValidator} from '../../services/confirmed.valiidator';
 
 @Component({
   selector: 'app-registration',
@@ -6,10 +9,50 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent implements OnInit {
+  registrationForm: FormGroup;
 
-  constructor() { }
+  constructor(private auth: AuthService, private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.registrationForm = this.fb.group({
+      name: new FormControl(null, [
+        Validators.required
+      ]),
+      surname: new FormControl(null, [
+        Validators.required,
+      ]),
+      password: new FormControl(null, [
+        Validators.required,
+        Validators.minLength(6)] ),
+      confirmPassword: new FormControl(null, [
+        Validators.required,
+      ] ),
+      phone: new FormControl(null, [
+        Validators.required,
+        Validators.minLength(10)
+      ]),
+      email: new FormControl(null, [
+        Validators.required,
+        Validators.email
+      ])
+    }, {
+      validator: ConfirmedValidator('password', 'confirmPassword')
+    })
   }
 
+  get f(){
+    return this.registrationForm.controls;
+  }
+
+  submitForm() {
+    if (this.registrationForm.invalid) {
+      return
+    }
+    let {email, password, phone, name, surname} = this.registrationForm.value
+
+    this.auth.registration({email, password, phone, name, surname}).subscribe(() => {
+      this.registrationForm.reset()
+      this.auth.sendSms({phone: `+7${this.registrationForm.get('phone').value}`})
+    })
+  }
 }
