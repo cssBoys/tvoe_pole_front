@@ -1,0 +1,104 @@
+.container{
+  width: 100%;
+  align-items: center;
+  max-height: 470px;
+  height: 100%;
+  margin: 20px auto 50px;
+}
+
+.links{
+  margin-bottom: 20px;
+}
+a{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-decoration: none;
+
+}
+a.disabled-link{
+  color: #303030;
+  opacity: 0.7;
+}
+a.link{
+  color: #303030;
+}
+.contacts-container{
+
+
+}
+
+.flex-container{
+  display: flex;
+  background: #FDFDFD;
+  box-sizing: border-box;
+}
+.flex-item{
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  margin: 0 20px;
+
+  height: 310px;
+
+}
+.flex-item-title{
+  margin-top: 24px;
+  margin-left: 24px;
+}
+.flex-item-title2{
+  margin-top: 24px;
+
+}
+.left{
+  width: 850px;
+}
+.right{
+  width: 270px;
+  padding-left: 24px;
+}
+.team{
+  display: inline-flex;
+  margin: 0 20px;
+}
+.place{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+
+  /* txt / Black */
+
+  color: #303030;
+
+  opacity: 0.7;
+}
+.contacts-label{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+}
+.contacts-data{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+
+  /* txt / Black */
+
+  color: #303030;
+
+  opacity: 0.7;
+}
+.first-icon{
+  margin-right: 16px;
+}
+.middle-icon{
+  margin: 0 16px;
+}
+.avatar{
+  padding-bottom: 10px;
+}
