@@ -10,3 +10,8 @@ export interface UserRegistration {
   name: string,
   surname: string
 }
+
+export interface Code {
+  id: number,
+  code: string
+}

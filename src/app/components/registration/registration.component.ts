@@ -52,7 +52,9 @@ export class RegistrationComponent implements OnInit {
 
     this.auth.registration({email, password, phone, name, surname}).subscribe(() => {
       this.registrationForm.reset()
-      this.auth.sendSms({phone: `+7${this.registrationForm.get('phone').value}`})
+
+
+      // this.auth.sendSms({phone: `+7${this.registrationForm.get('phone').value}`})
     })
   }
 }

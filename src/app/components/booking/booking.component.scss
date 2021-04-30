@@ -34,7 +34,6 @@ a.link{
 }
 .booking-info{
   width: 1140px;
-  height: 363px;
   background: #FDFDFD;
   border: 0.5px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
@@ -44,12 +43,12 @@ a.link{
 }
 .flex-container{
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 .flex-item{
   margin: 24px 24px;
-
 }
+
 .booking-date{
   width: 610px;
   border-bottom: 0.5px solid #303030;
@@ -139,14 +138,28 @@ td{
   color: #848484;
 }
 .icon-place{
-  margin-top: 70px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.outline {
+  position: relative;
+  width: 146px;
+  height: 146px;
+  &__icon {
+    position: absolute;
+    height: 48px;
+    width: 48px;
+  }
+}
+
 .booking-success{
   font-style: normal;
   font-weight: 500;
   font-size: 22px;
   line-height: 28px;
+  margin: 24px 0;
 }
 .booking-sms-notification{
   font-style: normal;
@@ -155,8 +168,15 @@ td{
   line-height: 19px;
   text-align: center;
   color: #848484;
+  width: 214px;
+  margin: 0 auto 24px;
 }
-.icon{
-  margin-left: 100px;
+
+.booking-link-to-home {
+  text-align: center;
+}
+
+.box {
+  margin: auto;
 }
 

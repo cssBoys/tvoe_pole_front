@@ -96,9 +96,12 @@ a.link{
 .first-icon{
   margin-right: 16px;
 }
-.middle-icon{
-  margin: 0 16px;
-}
 .avatar{
   padding-bottom: 10px;
+}
+.socials {
+  display: flex;
+  img {
+    margin-right: 16px;
+  }
 }

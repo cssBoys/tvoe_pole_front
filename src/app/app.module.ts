@@ -14,7 +14,6 @@ import { BookingHistoryComponent } from './components/booking-history/booking-hi
 import { PromoCodeComponent } from './components/promo-code/promo-code.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { CheckComponent } from './components/check/check.component';
-import { AddFootballFieldComponent } from './components/add-footbal-field/add-football-field.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {SharedModule} from './shared/shared.module';
 
@@ -31,8 +30,7 @@ import {SharedModule} from './shared/shared.module';
     BookingHistoryComponent,
     PromoCodeComponent,
     ContactsComponent,
-    CheckComponent,
-    AddFootballFieldComponent
+    CheckComponent
   ],
   imports: [
     BrowserModule,
