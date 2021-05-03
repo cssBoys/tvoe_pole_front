@@ -16,6 +16,7 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 import { CheckComponent } from './components/check/check.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {SharedModule} from './shared/shared.module';
+import { FilterComponent } from './components/filter/filter.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import {SharedModule} from './shared/shared.module';
     BookingHistoryComponent,
     PromoCodeComponent,
     ContactsComponent,
-    CheckComponent
+    CheckComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,

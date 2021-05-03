@@ -8,6 +8,8 @@ import {BookingHistoryComponent} from './components/booking-history/booking-hist
 import {PromoCodeComponent} from './components/promo-code/promo-code.component';
 import {ContactsComponent} from './components/contacts/contacts.component';
 import {CheckComponent} from './components/check/check.component';
+import {FilterComponent} from './components/filter/filter.component';
+
 
 const routes: Routes = [
   { path: 'registration', component: RegistrationComponent },
@@ -19,6 +21,7 @@ const routes: Routes = [
   { path: 'contacts', component: ContactsComponent},
   { path: 'check', component: CheckComponent},
   { path: 'booking', component: BookingComponent},
+  { path: 'search', component: FilterComponent},
   {
     path: 'add',
     loadChildren: () => import('./components/add-footbal-field/add-football-field.module').then(m => m.AddFootballFieldModule)},
