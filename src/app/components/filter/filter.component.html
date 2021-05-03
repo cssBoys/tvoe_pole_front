@@ -64,8 +64,8 @@
   </div>
 
   <section class="wrap">
-    <div *ngFor="let field of fields.results" class="wrap__founded-fields" >
-      <div class="wrap__founded-field">
+    <div  class="wrap__founded-fields" >
+      <div class="wrap__founded-field" *ngFor="let field of fields.results">
         <div class="wrap__founded-field__container">
           <img class="image" src="{{url+field.cover}}">
           <div style="clear: both">
