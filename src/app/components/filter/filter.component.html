@@ -1,0 +1,93 @@
+<div class="container">
+  <div class="search">
+    <label class="search-bar">
+      <img src="./assets/icons/search.svg" alt="">
+      <input class="search-bar__search" type="text" placeholder="Поиск площадок">
+      <button class="search-bar__btn">Искать</button>
+    </label>
+  </div>
+  <div class="filter">
+    <div class="filter__container">
+      <p class="text"><img style="display: inline" src="assets/icons/filter.svg"> Фильтры</p>
+      <p class="filter__container__reset">Очистить</p>
+
+      <div class="filter__container__menu">
+        <p class="filter__container__text">Тип</p>
+        <input type="radio" id="typeAll"
+               name="type" value="All">
+        <label for="typeAll">Все</label><br>
+
+        <input type="radio" id="footballFields"
+               name="type" value="Football">
+        <label for="footballFields">Футбольные поля</label><br>
+
+        <input type="radio" id="basketFields"
+               name="type" value="Football">
+        <label for="basketFields">Баскетбольные площадки</label><br>
+
+        <input type="radio" id="volleyballFields"
+               name="type" value="Volleyball">
+        <label for="volleyballFields">Волейбольные поля</label><br>
+      </div>
+
+      <div class="filter__container__menu">
+        <p class="filter__container__text">Рейтинг</p>
+        <input type="radio" id="any"
+               name="rating" value="Any">
+        <label for="any">С любым рейтингом</label><br>
+
+        <input type="radio" id="good"
+               name="rating" value="Good">
+        <label for="good">С рейтингом 4.5 и выше</label><br>
+
+        <input type="radio" id="best"
+               name="rating" value="Best">
+        <label for="best">С рейтингом 4.9 и выше</label><br>
+      </div>
+      <div class="filter__container__menu">
+        <p class="filter__container__text">Дополнительно</p>
+        <input type="checkbox" name="option1" value="all"><label>С любым рейтингом</label><br>
+        <input type="checkbox" name="option2" value="good"><label>С рейтингом 4.5 и выше</label><br>
+        <input type="checkbox" name="option3" value="best"><label>С рейтингом 4.9 и выше</label><br>
+      </div>
+
+
+
+
+    </div>
+
+
+  </div>
+  <div class="sort-bar">
+    <p class="sort-bar__text">Найден {{1}} результат</p>
+    <p class="sort-bar__text sort-bar__setting"><button class="sort-bar__sort"><img src="assets/icons/recommendation.svg"></button>Рекомендуемые</p>
+  </div>
+
+  <section class="wrap">
+    <div *ngFor="let field of fields.results" class="wrap__founded-fields" >
+      <div class="wrap__founded-field">
+        <div class="wrap__founded-field__container">
+          <img class="image" src="{{url+field.cover}}">
+          <div style="clear: both">
+
+            <p class="wrap__founded-field__container__text__left">{{field.title}}</p>
+            <p class="wrap__founded-field__container__text__right">{{field.rating}}</p>
+            <p class="wrap__founded-field__container__text__left">{{field.address}}</p>
+            <p class="wrap__founded-field__container__text__right">{{field.price}}</p>
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+    </div>
+
+  </section>
+
+</div>
+
