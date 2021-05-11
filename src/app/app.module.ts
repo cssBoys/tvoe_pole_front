@@ -17,6 +17,7 @@ import { CheckComponent } from './components/check/check.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {SharedModule} from './shared/shared.module';
 import { FilterComponent } from './components/filter/filter.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { FilterComponent } from './components/filter/filter.component';
     FormsModule,
     ReactiveFormsModule,
     SharedModule,
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

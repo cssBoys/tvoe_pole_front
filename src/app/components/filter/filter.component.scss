@@ -134,19 +134,32 @@
     &__container{
       margin: 0 8px;
 
+      &__flex{
+        display: flex;
+        justify-content: space-between;
+      }
 
       &__text{
         font-style: normal;
         font-weight: 500;
-        font-size: 15px;
+        font-size: 14px;
         line-height: 19px;
-        display: inline;
-        &__left{
-          float: left;
+
+        &__rating{
+          color: yellow;
+          img{
+            display: inline;
+            margin-top: -5px;
+          }
         }
-        &__right{
-          float: right;
+        &__special{
+          font-size: 12px;
+          line-height: 15px;
+          color: #C2C2C2;
+
         }
+
+
       }
     }
   }

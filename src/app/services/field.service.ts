@@ -11,6 +11,6 @@ export class FieldService {
   constructor(private http: HttpClient) { }
 
   getAllFields(): Observable<any> {
-    return this.http.get(this.url + `api/playground/`);
+    return this.http.get(this.url + `api/category/`);
   }
 }

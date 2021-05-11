@@ -2,8 +2,9 @@
   <div class="search">
     <label class="search-bar">
       <img src="./assets/icons/search.svg" alt="">
-      <input class="search-bar__search" type="text" placeholder="Поиск площадок">
+      <input class="search-bar__search" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Поиск площадок">
       <button class="search-bar__btn">Искать</button>
+
     </label>
   </div>
   <div class="filter">
@@ -13,42 +14,49 @@
 
       <div class="filter__container__menu">
         <p class="filter__container__text">Тип</p>
+        <form [formGroup]="fieldsType">
         <input type="radio" id="typeAll"
-               name="type" value="All">
+               formControlName="type" value="">
         <label for="typeAll">Все</label><br>
 
         <input type="radio" id="footballFields"
-               name="type" value="Football">
+               formControlName="type" value="Футбольное поле">
         <label for="footballFields">Футбольные поля</label><br>
 
         <input type="radio" id="basketFields"
-               name="type" value="Football">
+               formControlName="type" value="Баскетбольное поле">
         <label for="basketFields">Баскетбольные площадки</label><br>
 
         <input type="radio" id="volleyballFields"
-               name="type" value="Volleyball">
+               formControlName="type" value="Волейбольное поле">
         <label for="volleyballFields">Волейбольные поля</label><br>
+        </form>
       </div>
 
       <div class="filter__container__menu">
         <p class="filter__container__text">Рейтинг</p>
+        <form [formGroup]="fieldsRating">
         <input type="radio" id="any"
-               name="rating" value="Any">
+               formControlName="rating" value="" (click)="all()">
         <label for="any">С любым рейтингом</label><br>
 
         <input type="radio" id="good"
-               name="rating" value="Good">
+               formControlName="rating" value="Good" (click)="good()">
         <label for="good">С рейтингом 4.5 и выше</label><br>
 
         <input type="radio" id="best"
-               name="rating" value="Best">
+               formControlName="rating" value="Best" (click)="best()">
         <label for="best">С рейтингом 4.9 и выше</label><br>
+        </form>
       </div>
       <div class="filter__container__menu">
-        <p class="filter__container__text">Дополнительно</p>
-        <input type="checkbox" name="option1" value="all"><label>С любым рейтингом</label><br>
-        <input type="checkbox" name="option2" value="good"><label>С рейтингом 4.5 и выше</label><br>
-        <input type="checkbox" name="option3" value="best"><label>С рейтингом 4.9 и выше</label><br>
+        <p class="filter__container__text">Цена</p>
+        <form [formGroup]="fieldsCost">
+          <input type="checkbox" formControlName="low" value="low"><label>до 10000 т</label><br>
+          <input type="checkbox" formControlName="middle" value="middle"><label>10000 - 14999 т</label><br>
+          <input type="checkbox" formControlName="expensive" value="expensive"><label>более 15000 т</label><br>
+        </form>
+
       </div>
 
 
@@ -59,26 +67,35 @@
 
   </div>
   <div class="sort-bar">
-    <p class="sort-bar__text">Найден {{1}} результат</p>
+    <p class="sort-bar__text">Найдено {{i}} результата</p>
     <p class="sort-bar__text sort-bar__setting"><button class="sort-bar__sort"><img src="assets/icons/recommendation.svg"></button>Рекомендуемые</p>
   </div>
 
   <section class="wrap">
     <div  class="wrap__founded-fields" >
-      <div class="wrap__founded-field" *ngFor="let field of fields.results">
+      <div *ngFor="let field of fields | filter:searchText | filter:fieldsType.value.type">
+        <div *ngFor="let f of field.playgrounds ">
+
+
+      <div class="wrap__founded-field" >
         <div class="wrap__founded-field__container">
-          <img class="image" src="{{url+field.cover}}">
-          <div style="clear: both">
+          <img class="image" src="{{url+f.cover}}">
+          <div class="wrap__founded-field__container__flex">
+          <div>
+            <p class="wrap__founded-field__container__text">{{f.title}}</p>
+            <p class="wrap__founded-field__container__text__special">{{f.address}}</p>
 
-            <p class="wrap__founded-field__container__text__left">{{field.title}}</p>
-            <p class="wrap__founded-field__container__text__right">{{field.rating}}</p>
-            <p class="wrap__founded-field__container__text__left">{{field.address}}</p>
-            <p class="wrap__founded-field__container__text__right">{{field.price}}</p>
           </div>
-
+          <div>
+            <p class="wrap__founded-field__container__text__rating">{{f.rating}} <img src="assets/icons/star.svg"></p>
+            <p class="wrap__founded-field__container__text__special">{{f.price}} ₸</p>
+          </div>
+          </div>
         </div>
 
+      </div>
 
+        </div>
       </div>
 
 
@@ -91,3 +108,6 @@
 
 </div>
 
+<p>Form value: {{ fieldsType.value.type }}</p>
+<p>Form value: {{ fieldRating}}</p>
+<p>Form value: {{ fieldsCost.value | json}}</p>
