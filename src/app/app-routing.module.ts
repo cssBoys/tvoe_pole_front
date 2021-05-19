@@ -15,12 +15,11 @@ const routes: Routes = [
   { path: 'registration', component: RegistrationComponent },
   { path: 'login', component: LoginComponent},
   { path: 'edit', component: EditComponent},
-  { path: 'booking', component: BookingComponent},
+  { path: 'booking-history/booking', component: BookingComponent},
   { path: 'booking-history', component: BookingHistoryComponent},
   { path: 'promo-codes', component: PromoCodeComponent},
   { path: 'contacts', component: ContactsComponent},
   { path: 'check', component: CheckComponent},
-  { path: 'booking', component: BookingComponent},
   { path: 'search', component: FilterComponent},
   {
     path: 'add',

@@ -24,6 +24,7 @@ a.link{
   color: #303030;
 }
 .slider{
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -41,13 +42,14 @@ a.link{
   color: #C2C2C2;
 }
 .item-container{
-  margin: 24px;
+  padding: 24px;
 }
 .field-name{
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 5px;
+
 }
 .field-info{
   font-style: normal;
@@ -61,8 +63,8 @@ a.link{
   width: 52px;
   height: 55px;
   border-radius: 5px;
-  margin-top: -12px;
-  margin-right: 16px;
+
+
 
 }
 .bottom-slider{
@@ -88,4 +90,18 @@ a.link{
   /* clrs / White */
 
   color: #FDFDFD;
+  margin-top: 25px;
+}
+.flex-container{
+  display: flex;
+  margin-top: 20px;
+
+  &__flex-item{
+
+  }
+}
+.info{
+  margin-top: 9px;
+  margin-bottom: 9px;
+  margin-left: 15px;
 }

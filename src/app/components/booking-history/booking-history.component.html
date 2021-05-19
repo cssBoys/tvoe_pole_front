@@ -10,24 +10,18 @@
       <div *ngFor="let field of fields" class="slider-item">
         <div class="item-container">
           <p class="date">{{field.date}}</p>
-          <table>
-            <tr>
-              <td>
-                <img class="field-image" src="assets/images/{{field.image}}">
-              </td>
-              <td>
-                <div >
-                  <p class="field-name">{{field.name}}</p>
-                  <p class="field-info">{{field.description}}</p>
-                  <p class="field-info">{{field.address}}</p>
-                </div>
+          <div class="flex-container">
+            <div class="flex-container__flex-item">
+              <img class="field-image" src="assets/images/{{field.image}}">
+            </div>
+            <div class="flex-container__flex-item">
+              <p class="field-name info">{{field.name}}</p>
+              <p class="field-info info">{{field.description}}</p>
+              <p class="field-info info">{{field.address}}</p>
+            </div>
+          </div>
 
-              </td>
-            </tr>
-
-
-          </table>
-          <button class="details">Подробнее</button>
+          <button class="details" (click)="getFieldDetails(field)">Подробнее</button>
 
         </div>
 
@@ -45,24 +39,17 @@
         <div *ngFor="let field of fields" class="slider-item">
           <div class="item-container">
             <p class="date">{{field.date}}</p>
-            <table>
-              <tr>
-                <td>
-                  <img class="field-image" src="assets/images/{{field.image}}">
-                </td>
-                <td>
-                  <div >
-                    <p class="field-name">{{field.name}}</p>
-                    <p class="field-info">{{field.description}}</p>
-                    <p class="field-info">{{field.address}}</p>
-                  </div>
-
-                </td>
-              </tr>
-
-
-            </table>
-            <button class="details">Подробнее</button>
+            <div class="flex-container">
+              <div class="flex-container__flex-item">
+                <img class="field-image" src="assets/images/{{field.image}}">
+              </div>
+              <div class="flex-container__flex-item">
+                <p class="field-name info">{{field.name}}</p>
+                <p class="field-info info">{{field.description}}</p>
+                <p class="field-info info">{{field.address}}</p>
+              </div>
+            </div>
+            <button class="details" (click)="getFieldDetails(field)">Подробнее</button>
 
           </div>
 
@@ -75,3 +62,5 @@
     </div>
   </div>
 </div>
+
+
