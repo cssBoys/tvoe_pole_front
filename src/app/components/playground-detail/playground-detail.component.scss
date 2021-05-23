@@ -1,0 +1,151 @@
+.container {
+  margin-top: 20px;
+}
+
+.info {
+  width: 367px;
+  height: 531px;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.details {
+  margin: 40px 0 20px;
+  border-bottom: 0.5px solid #C2C2C2;
+}
+
+.btns {
+  border: none;
+  outline: none;
+  background: #FFFFFF;
+  margin: 0 40px 10px 0;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 24px;
+
+  &-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 24px;
+
+    &-main {
+      color: #636366;
+      font-size: 14px;
+      line-height: 17px;
+      background: #FFFFFF;
+      border: none;
+      outline: none;
+      border-bottom: 2px solid transparent;
+      min-width: 140px;
+      text-align: center;
+      padding-bottom: 7px;
+      &--active {
+        border-bottom-color: #4965F9;
+        border-bottom-color: #4965F9;
+      }
+    }
+
+    &-history {
+      color: #636366;
+      font-size: 14px;
+      line-height: 17px;
+      background: #FFFFFF;
+      border: none;
+      outline: none;
+      border-bottom: 2px solid transparent;
+      min-width: 140px;
+      text-align: center;
+      padding-bottom: 7px;
+      &--active {
+        border-bottom-color: #4965F9;
+        border-bottom-color: #4965F9;
+      }
+    }
+  }
+}
+
+.reviews {
+  display: flex;
+  justify-content: space-between;
+
+  &__rating {
+    width: 560px;
+    height: 201px;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  }
+
+  &__text {
+    width: 560px;
+    height: 201px;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+
+    &--area {
+      font-size: 14px;
+      line-height: 18px;
+      color: #848484;
+      outline: none;
+      border:none;
+      border-bottom: 0.5px solid #848484;
+    }
+  }
+
+  .btn {
+    width: 528px;
+    height: 40px;
+    background: #4965F9;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    //font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+  }
+}
+
+.block {
+  display: flex;
+  margin-bottom: 45px;
+
+  p {
+    margin-right: 25px;
+  }
+}
+
+.reviews__show {
+  width: 560px;
+  border-bottom: 0.5px solid #C2C2C2;
+  padding: 16px;
+
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+}
+.star-rating {
+  position: relative;
+  top: -4px;
+}
+
+.text {
+  font-size: 15px;
+  line-height: 20px;
+  color: #848484;
+}
+
+.all-reviews {
+  display: flex;
+  justify-content: space-between;
+}

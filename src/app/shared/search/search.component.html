@@ -7,7 +7,66 @@
 
   <label class="search-bar">
     <img src="./assets/icons/search.svg" alt="">
-    <input type="text" placeholder="Поиск площадок">
+    <input id="search" type="text" placeholder="Поиск площадок">
     <button class="search-bar__btn">Искать</button>
   </label>
 </div>
+
+<main>
+  <h1 class="title">{{fields[0]?.title}}</h1>
+  <div class="fields">
+    <div class="field" *ngFor="let field of fields[0]?.playgrounds">
+      <img class="image" src="assets/images/central.svg" alt="">
+      <img class="like" src="assets/icons/like.svg" alt="">
+      <span>{{field.title}}</span>
+      <div class="field__info">
+        <span>{{field.address}}</span>
+        <span>{{field.price}} ₸ </span>
+      </div>
+    </div>
+    <button class="field__add" (click)="addField()">
+      Добавить поле
+      <img src="assets/icons/add.svg" class="field__add-icon">
+    </button>
+  </div>
+
+  <h1 class="title">{{fields[1]?.title}}</h1>
+  <div class="fields">
+    <div class="field" *ngFor="let field of fields[1]?.playgrounds">
+      <img class="image" src="assets/images/central.svg" alt="">
+      <img class="like" src="assets/icons/like.svg" alt="">
+      <span>{{field.title}}</span>
+      <div class="field__info">
+        <span>{{field.address}}</span>
+        <span>{{field.price}} ₸ </span>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<app-modal *ngIf="modal" id="paybox-error" >
+  <h1 class="navbar">Ошибка оплаты</h1>
+  <button class="btn" (click)="closeModal('paybox-error');">Close</button>
+</app-modal>
+
+
+<!--  <div class="field">-->
+<!--    <img class="image" src="assets/images/medey.svg" alt="">-->
+<!--    <img class="like" src="assets/icons/like.svg" alt="">-->
+<!--    <span>Медеуское поле</span>-->
+<!--    <div class="field__info">-->
+<!--      <span>ул. Ленина, 97</span>-->
+<!--      <span>2000-2500 ₸ </span>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="field">-->
+<!--    <img class="image" src="assets/images/tolebi.svg" alt="">-->
+<!--    <img class="like" src="assets/icons/like.svg" alt="">-->
+<!--    <span>Поле по Толе Би</span>-->
+<!--    <div class="field__info">-->
+<!--      <span>ул. Толе Би, 128</span>-->
+<!--      <span>2000-2500 ₸ </span>-->
+<!--    </div>-->
+<!--  </div>-->

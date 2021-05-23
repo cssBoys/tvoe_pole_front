@@ -3,9 +3,7 @@ footer{
   height: 100%;
   width: 100%;
   align-items: center;
-  border-top: 0.5px solid transparent;
   border-top-color: gray;
-  margin-top: 60px;
 }
 .row{
   margin-top: 40px;
@@ -17,6 +15,8 @@ footer{
   font-weight: normal;
   font-size: 15px;
   line-height: 19px;
+  color: #fff;
+  opacity: 0.6;
 
 }
 
@@ -36,6 +36,6 @@ footer{
 }
 a{
   padding-bottom: 20px;
-  color: #303030;
+  color: #fff;
   opacity: 0.6;
 }

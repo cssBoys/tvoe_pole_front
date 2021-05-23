@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="info">
+
+  </div>
+
+  <div class="carousel">
+
+  </div>
+
+  <div class="details">
+    <button class="header-tabs-main"
+            (click)="tabHist('contacts')"
+            [class.header-tabs-main--active]="action === 'contacts'"
+    >Контакты</button>
+    <button class="header-tabs-history"
+            (click)="tabHist('reviews')"
+            [class.header-tabs-history--active]="action === 'reviews'"
+    >Отзывы</button>
+  </div>
+
+  <div class="reviews" *ngIf="action === 'reviews'">
+    <div class="reviews__rating">
+
+    </div>
+    <div class="reviews__text">
+      <div class="block">
+        <p>Оставьте отзыв</p>
+        <app-star-rating class="star-rating"
+                         [rating]='rating'
+                         [itemId]='id'
+                         (ratingClick)='ratingComponetClick($event)'
+        ></app-star-rating>
+      </div>
+      <textarea  rows="2" cols="50" class="reviews__text--area" id="comment" #titleInput></textarea>
+      <button class="btn" (click) = "addTodo(titleInput.value)">Оставить отзыв</button>
+    </div>
+  </div>
+
+  <ng-container *ngIf="action === 'reviews'">
+    <div class="all-reviews">
+      <p>Все отзывы</p>
+      <p>1 отзыв</p>
+    </div>
+    <div class="reviews__show">
+      <div class="reviews__show-info">
+        <p class="name">Aidyn</p>
+        <p>{{showRating}}</p>
+      </div>
+      <p class="text">
+        {{text}}
+      </p>
+    </div>
+  </ng-container>
+</div>

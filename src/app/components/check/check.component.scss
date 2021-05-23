@@ -1,4 +1,4 @@
-.container{
+.container {
   width: 100%;
   align-items: center;
   max-height: 470px;
@@ -6,10 +6,11 @@
   margin: 20px auto 50px;
 }
 
-.links{
+.links {
   margin-bottom: 20px;
+  padding: 0 24px;
 }
-a{
+a {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -17,71 +18,88 @@ a{
   text-decoration: none;
 
 }
-a.disabled-link{
+a.disabled-link {
   color: #303030;
   opacity: 0.7;
 }
-a.link{
+a.link {
   color: #303030;
 }
-.flex-container{
+.flex-container {
   display: flex;
   background: #FDFDFD;
   box-sizing: border-box;
 }
-.flex-item{
+.flex-item {
 
   margin: 0 20px;
 
 
 
 }
-.flex-subitem{
+.flex-subitem {
   border: 0.5px solid rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   height: 310px;
 
 
 }
-.flex-subitem-container{
+.flex-subitem-container {
   margin: 24px;
 
 }
-.balance{
+.balance {
+  display: flex;
+  justify-content: space-between;
   padding-bottom: 20px;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+
+  &__amount {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 45px;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    line-height: 23px;
+    color: #303030;
+    opacity: 0.6;
+  }
 }
-.promo-codes{
+.promo-codes {
+  display: flex;
+  justify-content: space-between;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 0.5px solid #C2C2C2;
 }
 
-.promo-codes p{
+.promo-codes p {
   display: inline;
 }
-.balance p{
-  display: inline;
-}
-.info{
+
+.info {
   background: #D9DEFC;
   border-radius: 6px;
   margin-top: 20px;
   margin-bottom: 90px;
 }
-.info-item{
+.info-item {
+  display: flex;
   padding: 16px 24px;
+  color: #4965F9;
+  font-weight: bold;
 }
-.info-text{
+.info-text {
   margin-right: 16px;
   margin-top: -2px;
 }
-.pay{
+.pay {
   width: 415px;
   height: 38px;
-
-
-  /* clrs / Green */
 
   background: #66D26A;
   border-radius: 4px;
@@ -89,18 +107,16 @@ a.link{
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
-  /* identical to box height */
-
   text-align: center;
-
   color: #FFFFFF;
+  outline: none;
+  border: none;
 }
 
-.use{
+.use {
   width: 222px;
   height: 38px;
-
-  /* clrs / Main */
+  margin-top: 35px;
 
   background: #4965F9;
   border-radius: 4px;
@@ -108,9 +124,24 @@ a.link{
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
-  /* identical to box height */
-
   text-align: center;
-
   color: #FFFFFF;
+  outline: none;
+  border: none;
+}
+.text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  margin: 0 0 20px 4px;
+}
+
+.amount {
+  font-size: 36px;
+  line-height: 45px;
+}
+
+.sum {
+  color: #303030;
+  opacity: 0.6;
 }

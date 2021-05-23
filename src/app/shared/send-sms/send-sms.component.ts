@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import {AuthService} from '../../services/auth.service';
 import {CodeInputComponent} from 'angular-code-input';
 
@@ -9,21 +9,20 @@ import {CodeInputComponent} from 'angular-code-input';
 })
 export class SendSmsComponent implements OnInit {
   @ViewChild('codeInput') codeInput !: CodeInputComponent;
+  @Output() close = new EventEmitter();
 
   constructor(private auth: AuthService) { }
 
   ngOnInit() {
   }
 
-  onCodeChanged(code: string) {
-  }
-
   onCodeCompleted(code: string) {
     let id = 2
-    this.auth.activateCode({id, code}).subscribe(() => {
+    this.auth.sendSms({id, code}).subscribe(() => {
       console.log(code);
     })
+    this.codeInput.reset();
+    this.close.emit()
   }
-
 
 }

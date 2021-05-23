@@ -9,19 +9,20 @@ import {PromoCodeComponent} from './components/promo-code/promo-code.component';
 import {ContactsComponent} from './components/contacts/contacts.component';
 import {CheckComponent} from './components/check/check.component';
 import {FilterComponent} from './components/filter/filter.component';
+import {PlaygroundDetailComponent} from './components/playground-detail/playground-detail.component';
 
 
 const routes: Routes = [
   { path: 'registration', component: RegistrationComponent },
   { path: 'login', component: LoginComponent},
   { path: 'edit', component: EditComponent},
-  { path: 'booking', component: BookingComponent},
+  { path: 'check', component: BookingComponent},
   { path: 'booking-history', component: BookingHistoryComponent},
   { path: 'promo-codes', component: PromoCodeComponent},
   { path: 'contacts', component: ContactsComponent},
-  { path: 'check', component: CheckComponent},
-  { path: 'booking', component: BookingComponent},
+  { path: 'booking', component: CheckComponent},
   { path: 'search', component: FilterComponent},
+  { path: 'search/:id', component: PlaygroundDetailComponent},
   {
     path: 'add',
     loadChildren: () => import('./components/add-footbal-field/add-football-field.module').then(m => m.AddFootballFieldModule)},

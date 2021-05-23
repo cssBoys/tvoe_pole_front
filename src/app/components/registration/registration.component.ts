@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {AuthService} from '../../services/auth.service';
 import {ConfirmedValidator} from '../../services/confirmed.valiidator';
+import {ModalService} from '../modal/modal.service';
 
 @Component({
   selector: 'app-registration',
@@ -10,8 +11,11 @@ import {ConfirmedValidator} from '../../services/confirmed.valiidator';
 })
 export class RegistrationComponent implements OnInit {
   registrationForm: FormGroup;
+  modalSms = false;
+  hideRepeatPassword = true;
+  hidePassword = true;
 
-  constructor(private auth: AuthService, private fb: FormBuilder) { }
+  constructor(private auth: AuthService, private fb: FormBuilder, private modal: ModalService) { }
 
   ngOnInit() {
     this.registrationForm = this.fb.group({
@@ -49,6 +53,7 @@ export class RegistrationComponent implements OnInit {
       return
     }
     let {email, password, phone, name, surname} = this.registrationForm.value
+    phone = `+7${phone}`
 
     this.auth.registration({email, password, phone, name, surname}).subscribe(() => {
       this.registrationForm.reset()
@@ -56,5 +61,10 @@ export class RegistrationComponent implements OnInit {
 
       // this.auth.sendSms({phone: `+7${this.registrationForm.get('phone').value}`})
     })
+    this.modalSms = true
+  }
+
+  closeModal(id: string) {
+    this.modal.close(id);
   }
 }

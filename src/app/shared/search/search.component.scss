@@ -51,8 +51,90 @@ input {
   height: 700px;
   background-image: url("~/assets/images/main.svg");
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100%;
-  background-position: center center;
   padding-top: 180px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin-bottom: 24px;
+}
+
+.fields {
+  display: flex;
+  align-items: center;
+  margin: 0 30px 40px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  width: 290px;
+  border-radius: 14px;
+  margin-right: 20px;
+  padding: 8px;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+
+  .image {
+    height: 220px;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 14px;
+    margin-bottom: 10px;
+  }
+
+  &__add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 160px;
+    background: #66D26A;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 24px;
+    color: #FDFDFD;
+
+    &-icon {
+      color: #FDFDFD;
+      margin-left: 10px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      color: #C2C2C2;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+}
+
+.like {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+
+.btn {
+  background: black;
+  border-radius: 0;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.navbar {
+  background: rgba(192, 57, 43, 1);
+  color: #fff;
+}
+
+.title {
+  margin: 0 0 20px 32px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
 }

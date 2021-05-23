@@ -1,13 +1,20 @@
 .main {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 .header {
-  height: 80%;
   padding: 8px;
+  background-color: #021d2b;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .footer {
-  flex: 1 1 auto;
+  background-color: rgb(2, 29, 43);
+  margin-top: 60px;
+  border: 1px solid black;
 }

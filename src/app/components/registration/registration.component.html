@@ -52,7 +52,12 @@
 
       <div class="form-element">
         <label for="password">Пароль</label><a class="require">*</a><br>
-        <input id="password" name="password" placeholder="Введите пароль" formControlName="password">
+        <div class="pass">
+          <input id="password" name="password" placeholder="Введите пароль" formControlName="password" [type]="hidePassword ? 'password' : 'text'">
+          <button class="show__btn" (click)="hidePassword = !hidePassword">
+            <img [src]="hidePassword ? 'assets/icons/show-pass.svg' :'assets/icons/password-hide.svg'" alt="">
+          </button>
+        </div>
 
         <div
           class="validation"
@@ -70,7 +75,12 @@
 
       <div class="form-element">
         <label for="confirmPassword">Повторите пароль</label><a class="require">*</a><br>
-        <input id="confirmPassword" name="confirmPassword" placeholder="Повторите пароль" formControlName="confirmPassword">
+        <div class="pass">
+          <input id="confirmPassword" name="confirmPassword" placeholder="Повторите пароль" formControlName="confirmPassword" [type]="hideRepeatPassword ? 'password' : 'text'">
+          <button class="show__btn" (click)="hideRepeatPassword = !hideRepeatPassword">
+            <img [src]="hideRepeatPassword ? 'assets/icons/show-pass.svg' :'assets/icons/password-hide.svg'" alt="">
+          </button>
+        </div>
 
         <div
           class="validation"
@@ -127,3 +137,7 @@
 
 </div>
 
+<app-modal *ngIf="modalSms" id="sms">
+  <h1 class="sms-title">На ваш телефон отправлен SMS с кодом для подтверждения</h1>
+  <app-send-sms class="box" (close)="closeModal('sms')"></app-send-sms>
+</app-modal>

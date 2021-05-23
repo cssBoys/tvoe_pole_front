@@ -5,7 +5,7 @@
       <h2 class="login-text">Вход</h2>
 
       <div
-        class="form-element"
+        class="form-element log"
         [ngClass]="{invalid:form.get('phone').touched && form.get('phone').invalid}"
       >
         <label for="phone">Номер телефона</label><br>
@@ -36,7 +36,12 @@
         [ngClass]="{invalid:form.get('password').touched && form.get('password').invalid}"
       >
         <label for="password">Пароль</label><br>
-        <input id="password" type="password" placeholder="Введите пароль" formControlName="password">
+        <div class="pass">
+          <input id="password" type="password" placeholder="Введите пароль" formControlName="password" [type]="hidePassword ? 'password' : 'text'">
+          <button class="show__btn" (click)="hidePassword = !hidePassword">
+            <img [src]="hidePassword ? 'assets/icons/show-pass.svg' :'assets/icons/password-hide.svg'" alt="">
+          </button>
+        </div>
         <div
           class="validation"
           *ngIf="form.get('password').touched && form.get('password').invalid"

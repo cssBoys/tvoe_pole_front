@@ -41,9 +41,22 @@
   line-height: 19px;
   outline: none;
   border: 0;
-  background: white;
+  background: inherit;
+  color: #fff;
+  opacity: 0.6;
+
+  img {
+    margin-right: 16px;
+  }
 }
 a{
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  color: #303030;
+  color: #fff;
+  opacity: 0.6;
+}
+
+.arrow {
+  margin-left: 8px;
 }

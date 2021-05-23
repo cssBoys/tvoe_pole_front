@@ -1,9 +1,9 @@
 <div class="container">
   <div class="search">
     <label class="search-bar">
+      <input class="search-bar__search" type="text" placeholder="Поиск площадок" [(ngModel)]="searchStr">
       <img src="./assets/icons/search.svg" alt="">
-      <input class="search-bar__search" type="text" placeholder="Поиск площадок">
-      <button class="search-bar__btn">Искать</button>
+<!--      <button class="search-bar__btn">Искать</button>-->
     </label>
   </div>
   <div class="filter">
@@ -50,10 +50,6 @@
         <input type="checkbox" name="option2" value="good"><label>С рейтингом 4.5 и выше</label><br>
         <input type="checkbox" name="option3" value="best"><label>С рейтингом 4.9 и выше</label><br>
       </div>
-
-
-
-
     </div>
 
 
@@ -64,29 +60,26 @@
   </div>
 
   <section class="wrap">
-    <div  class="wrap__founded-fields" >
-      <div class="wrap__founded-field" *ngFor="let field of fields.results">
+    <div class="wrap__founded-fields" >
+      <div class="wrap__founded-field" *ngFor="let field of fields?.results | searchFields: searchStr">
         <div class="wrap__founded-field__container">
-          <img class="image" src="{{url+field.cover}}">
-          <div style="clear: both">
+          <a [routerLink]="[field.id]">
+            <img class="image" src="{{url+field.cover}}">
+          </a>
+          <div>
 
-            <p class="wrap__founded-field__container__text__left">{{field.title}}</p>
-            <p class="wrap__founded-field__container__text__right">{{field.rating}}</p>
-            <p class="wrap__founded-field__container__text__left">{{field.address}}</p>
-            <p class="wrap__founded-field__container__text__right">{{field.price}}</p>
+           <div class="info">
+             <p class="info__title">{{field.title}}</p>
+             <p class="info__rating">{{field.rating}}</p>
+           </div>
+            <div class="info">
+              <p class="info__address">{{field.address}}</p>
+              <p class="info__price">{{field.price}} ₸</p>
+            </div>
           </div>
-
         </div>
-
-
       </div>
-
-
-
-
-
     </div>
-
   </section>
 
 </div>

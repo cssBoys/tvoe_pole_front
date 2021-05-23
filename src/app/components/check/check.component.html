@@ -5,60 +5,60 @@
   <div class="check-container">
     <div class="flex-container">
       <div class="flex-item">
-        <p>Счёт</p>
+        <p class="text">Счёт</p>
         <div class="flex-subitem">
           <div class="flex-subitem-container">
 
 
           <div class="balance">
-            <p>3000</p>
-            <p>Сумма баланса</p>
+            <p class="balance__amount">{{amount}}</p>
+            <p class="balance__text">Сумма баланса</p>
 
           </div>
           <div class="info">
             <p class="info-item"><img src="assets/icons/info.svg" class="info-text">Перед бронированием пополняйте ваш счёт</p>
           </div>
-          <button class="pay">Пополнить</button>
+          <button class="pay" (click)="toBook()">Пополнить</button>
 
         </div>
         </div>
       </div>
       <div class="flex-item">
-        <p>Промокоды</p>
+        <p class="text">Промокоды</p>
         <div class="flex-subitem">
           <div class="flex-subitem-container">
             <div class="balance">
-              <p>4</p>
+              <p class="amount">2</p>
               <p>Промокодов</p>
 
             </div>
             <div class="promo-codes">
               <p>QGNA</p>
-              <p>500</p>
+              <p class="sum">500.00 ₸</p>
 
             </div>
             <div class="promo-codes">
               <p>QGNA</p>
-              <p>500</p>
+              <p class="sum">500.00 ₸</p>
 
             </div>
             <button class="use">Использовать</button>
           </div>
         </div>
       </div>
-      <div class="flex-item">
-        <p>История операций</p>
-        <div class="flex-subitem">
-          <div class="flex-subitem-container">
-            <div class="balance">
-              <p>23</p>
-              <p>Операций выполнено</p>
+<!--      <div class="flex-item">-->
+<!--        <p class="text">История операций</p>-->
+<!--        <div class="flex-subitem">-->
+<!--          <div class="flex-subitem-container">-->
+<!--            <div class="balance">-->
+<!--              <p>23</p>-->
+<!--              <p>Операций выполнено</p>-->
 
-            </div>
-          </div>
+<!--            </div>-->
+<!--          </div>-->
 
-        </div>
-      </div>
+<!--        </div>-->
+<!--      </div>-->
     </div>
 
   </div>

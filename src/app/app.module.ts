@@ -17,6 +17,9 @@ import { CheckComponent } from './components/check/check.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {SharedModule} from './shared/shared.module';
 import { FilterComponent } from './components/filter/filter.component';
+import {AuthInterceptor} from './interceptors/auth.interceptor';
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
+import { PlaygroundDetailComponent } from './components/playground-detail/playground-detail.component';
 
 
 @NgModule({
@@ -32,7 +35,8 @@ import { FilterComponent } from './components/filter/filter.component';
     PromoCodeComponent,
     ContactsComponent,
     CheckComponent,
-    FilterComponent
+    FilterComponent,
+    PlaygroundDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +46,11 @@ import { FilterComponent } from './components/filter/filter.component';
     SharedModule,
     NgxMaskModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
+  ],
+  exports: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

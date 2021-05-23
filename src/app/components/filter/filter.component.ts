@@ -10,10 +10,11 @@ import {FieldService} from '../../services/field.service';
 })
 export class FilterComponent implements OnInit {
   fields: Observable<Result>;
-  url;
+  searchStr = '';
+  url = 'http://185.111.106.59'
+
   constructor(private fieldService: FieldService) { }
   ngOnInit() {
-    this.url = this.fieldService.url;
     this.fieldService.getAllFields().subscribe(data => {
       this.fields = data;
     });
