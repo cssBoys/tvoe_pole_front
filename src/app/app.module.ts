@@ -20,6 +20,7 @@ import { FilterComponent } from './components/filter/filter.component';
 import {AuthInterceptor} from './interceptors/auth.interceptor';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import { PlaygroundDetailComponent } from './components/playground-detail/playground-detail.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { PlaygroundDetailComponent } from './components/playground-detail/playgr
     FormsModule,
     ReactiveFormsModule,
     SharedModule,
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
+    Ng2SearchPipeModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},

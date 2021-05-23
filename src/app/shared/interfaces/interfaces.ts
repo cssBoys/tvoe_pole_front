@@ -16,7 +16,7 @@ export interface Code {
   code: string
 }
 
-export interface Result {
+export interface Playgrounds {
   id: number;
   title: string;
   cover: string;
@@ -26,10 +26,9 @@ export interface Result {
 }
 
 export interface Field {
-  count: number;
-  next?: any;
-  previous?: any;
-  results: Result[];
+  id: number;
+  title: string;
+  playgrounds: Playgrounds[];
 }
 
 export interface Token {
