@@ -10,6 +10,8 @@ import {ContactsComponent} from './components/contacts/contacts.component';
 import {CheckComponent} from './components/check/check.component';
 import {FilterComponent} from './components/filter/filter.component';
 import {PlaygroundDetailComponent} from './components/playground-detail/playground-detail.component';
+import {ReserveFieldComponent} from './components/reserve-field/reserve-field.component';
+import {FinishedReserveComponent} from './components/finished-reserve/finished-reserve.component';
 
 
 const routes: Routes = [
@@ -23,6 +25,8 @@ const routes: Routes = [
   { path: 'booking', component: CheckComponent},
   { path: 'search', component: FilterComponent},
   { path: 'search/:id', component: PlaygroundDetailComponent},
+  { path: 'reserve', component: ReserveFieldComponent},
+  { path: 'confirmation', component: FinishedReserveComponent},
   {
     path: 'add',
     loadChildren: () => import('./components/add-footbal-field/add-football-field.module').then(m => m.AddFootballFieldModule)},

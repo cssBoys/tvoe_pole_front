@@ -14,6 +14,7 @@ export class SearchComponent implements OnInit, OnDestroy {
   fields: any = []
   images
   pSub: Subscription
+  url = 'http://185.111.106.59'
 
   constructor(private router: Router, private route: ActivatedRoute, private modalService: ModalService, private fieldsService: FieldService) { }
 

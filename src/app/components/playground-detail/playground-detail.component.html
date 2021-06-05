@@ -1,5 +1,31 @@
 <div class="container">
   <div class="info">
+    <p class="info__address">Поле по Толе Би</p>
+    <p class="info__title">Футбольное поле с открытым верхом</p>
+
+    <p class="info__rating">4.6</p>
+    <p class="info__review">64 отзыва</p>
+
+    <p class="info__about">О нас</p>
+
+    <div class="box">
+      <img src="assets/icons/clock.svg" alt="">
+      <p class="box__date">10:00 - 22:00</p>
+    </div>
+
+    <div class="box">
+      <img src="assets/icons/call.svg" alt="">
+      <p class="box__date">+7 708 537 33 59</p>
+    </div>
+
+    <div class="box">
+      <img class="marker" src="assets/icons/mark.svg" alt="">
+      <p class="box__date">ул. Толе Би, 128</p>
+    </div>
+
+    <button class="reserve" (click)="goToReserve()">
+      Забронировать
+    </button>
 
   </div>
 
@@ -35,6 +61,30 @@
       <button class="btn" (click) = "addTodo(titleInput.value)">Оставить отзыв</button>
     </div>
   </div>
+
+  <ng-container *ngIf="action === 'contacts'">
+    <div class="warp">
+      <div class="contacts">
+        <div class="contacts__img">
+          <img src="assets/icons/info.svg" alt="">
+        </div>
+        <div class="contacts__info">
+          <p class="name">Алма Аязбаева</p>
+          <p class="role">Администратор</p>
+        </div>
+      </div>
+
+      <div class="call">
+        <img class="call__icon" src="assets/icons/call.svg">
+        <p class="call__text">+7 708 537 33 59</p>
+      </div>
+      <div class="instagram">
+        <img class="instagram__icon" src="assets/icons/insta.svg">
+        <p class="instagram__text">Instagram</p>
+      </div>
+
+    </div>
+  </ng-container>
 
   <ng-container *ngIf="action === 'reviews'">
     <div class="all-reviews">

@@ -1,22 +1,22 @@
 export interface User {
-  phone: any,
-  password: string
+  phone: any;
+  password: string;
 }
 
 export interface UserRegistration {
-  email: string,
-  password: string,
-  phone: any,
-  name: string,
-  surname: string
+  email: string;
+  password: string;
+  phone: any;
+  name: string;
+  surname: string;
 }
 
 export interface Code {
-  id: number,
-  code: string
+  id: number;
+  code: string;
 }
 
-export interface Playgrounds {
+export interface Result {
   id: number;
   title: string;
   cover: string;
@@ -28,7 +28,7 @@ export interface Playgrounds {
 export interface Field {
   id: number;
   title: string;
-  playgrounds: Playgrounds[];
+  playgrounds: Result[];
 }
 
 export interface Token {

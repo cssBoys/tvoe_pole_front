@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {FieldService} from '../../services/field.service';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-playground-detail',
@@ -18,7 +18,7 @@ export class PlaygroundDetailComponent implements OnInit {
   showReview = false;
 
 
-  constructor(private field: FieldService, private route: ActivatedRoute) { }
+  constructor(private field: FieldService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
@@ -49,4 +49,7 @@ export class PlaygroundDetailComponent implements OnInit {
           now is time to update the item with the new rating`);
   }
 
+  goToReserve() {
+    this.router.navigate(['reserve'])
+  }
 }

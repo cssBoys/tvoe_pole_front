@@ -16,11 +16,16 @@
   <h1 class="title">{{fields[0]?.title}}</h1>
   <div class="fields">
     <div class="field" *ngFor="let field of fields[0]?.playgrounds">
-      <img class="image" src="assets/images/central.svg" alt="">
+      <img class="image" src="{{url+field.cover}}" alt="">
       <img class="like" src="assets/icons/like.svg" alt="">
-      <span>{{field.title}}</span>
+      <div class="wrap">
+        <span class="field__title">{{field.title}}</span>
+        <span class="field__rating">{{field.rating | number : '1.0-0'}}
+          <img src="/assets/icons/star.svg" alt="">
+        </span>
+      </div>
       <div class="field__info">
-        <span>{{field.address}}</span>
+        <span class="field__info-address">{{field.address}}</span>
         <span>{{field.price}} ₸ </span>
       </div>
     </div>
@@ -33,11 +38,58 @@
   <h1 class="title">{{fields[1]?.title}}</h1>
   <div class="fields">
     <div class="field" *ngFor="let field of fields[1]?.playgrounds">
-      <img class="image" src="assets/images/central.svg" alt="">
+      <div class="asd">
+        <img class="image" src="{{url+field.cover}}" alt="">
+      </div>
       <img class="like" src="assets/icons/like.svg" alt="">
-      <span>{{field.title}}</span>
+      <div class="wrap">
+        <span class="field__title">{{field.title}}</span>
+        <span class="field__rating">{{field.rating | number : '1.0-0'}}
+          <img src="/assets/icons/star.svg" alt="">
+        </span>
+      </div>
       <div class="field__info">
-        <span>{{field.address}}</span>
+        <span class="field__info-address">{{field.address}}</span>
+        <span>{{field.price}} ₸ </span>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="title">{{fields[2]?.title}}</h1>
+  <div class="fields">
+    <div class="field" *ngFor="let field of fields[2]?.playgrounds">
+      <div class="asd">
+        <img class="image" src="{{url+field.cover}}" alt="">
+      </div>
+      <img class="like" src="assets/icons/like.svg" alt="">
+      <div class="wrap">
+        <span class="field__title">{{field.title}}</span>
+        <span class="field__rating">{{field.rating | number : '1.0-0'}}
+          <img src="/assets/icons/star.svg" alt="">
+        </span>
+      </div>
+      <div class="field__info">
+        <span class="field__info-address">{{field.address}}</span>
+        <span>{{field.price}} ₸ </span>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="title">{{fields[3]?.title}}</h1>
+  <div class="fields">
+    <div class="field" *ngFor="let field of fields[3]?.playgrounds">
+      <div class="asd">
+        <img class="image" src="{{url+field.cover}}" alt="">
+      </div>
+      <img class="like" src="assets/icons/like.svg" alt="">
+      <div class="wrap">
+        <span class="field__title">{{field.title}}</span>
+        <span class="field__rating">{{field.rating | number : '1.0-0'}}
+          <img src="/assets/icons/star.svg" alt="">
+        </span>
+      </div>
+      <div class="field__info">
+        <span class="field__info-address">{{field.address}}</span>
         <span>{{field.price}} ₸ </span>
       </div>
     </div>
@@ -50,23 +102,3 @@
   <button class="btn" (click)="closeModal('paybox-error');">Close</button>
 </app-modal>
 
-
-<!--  <div class="field">-->
-<!--    <img class="image" src="assets/images/medey.svg" alt="">-->
-<!--    <img class="like" src="assets/icons/like.svg" alt="">-->
-<!--    <span>Медеуское поле</span>-->
-<!--    <div class="field__info">-->
-<!--      <span>ул. Ленина, 97</span>-->
-<!--      <span>2000-2500 ₸ </span>-->
-<!--    </div>-->
-<!--  </div>-->
-
-<!--  <div class="field">-->
-<!--    <img class="image" src="assets/images/tolebi.svg" alt="">-->
-<!--    <img class="like" src="assets/icons/like.svg" alt="">-->
-<!--    <span>Поле по Толе Би</span>-->
-<!--    <div class="field__info">-->
-<!--      <span>ул. Толе Би, 128</span>-->
-<!--      <span>2000-2500 ₸ </span>-->
-<!--    </div>-->
-<!--  </div>-->

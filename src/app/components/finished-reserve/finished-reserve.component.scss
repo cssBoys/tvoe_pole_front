@@ -1,0 +1,15 @@
+.finish {
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  width: 679px;
+  padding: 20px;
+  margin: 0 auto;
+
+  &__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 30px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+  }
+}

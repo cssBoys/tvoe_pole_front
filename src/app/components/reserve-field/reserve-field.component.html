@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="reserve">
+    <form [formGroup]="myForm" novalidate>
+      <my-date-picker name="mydate" [options]="myDatePickerOptions"
+                      [placeholder]="placeholder"
+                      formControlName="myDate"></my-date-picker>
+      <!-- other controls are here... -->
+
+      <p>Выберите время</p>
+
+      <p>Утро</p>
+
+      <p>День</p>
+
+      <p>Вечер</p>
+
+      <button class="next-step" (click)="finish()">Продолжить бронирование</button>
+    </form>
+  </div>
+
+</div>

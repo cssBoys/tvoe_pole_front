@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {NgxMaskModule, IConfig} from 'ngx-mask';
+import {NgxMaskModule,} from 'ngx-mask';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +20,9 @@ import { FilterComponent } from './components/filter/filter.component';
 import {AuthInterceptor} from './interceptors/auth.interceptor';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import { PlaygroundDetailComponent } from './components/playground-detail/playground-detail.component';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ReserveFieldComponent } from './components/reserve-field/reserve-field.component';
+import { MyDatePickerModule } from 'mydatepicker';
+import { FinishedReserveComponent } from './components/finished-reserve/finished-reserve.component';
 
 
 @NgModule({
@@ -38,6 +40,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     CheckComponent,
     FilterComponent,
     PlaygroundDetailComponent,
+    ReserveFieldComponent,
+    FinishedReserveComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     ReactiveFormsModule,
     SharedModule,
     NgxMaskModule.forRoot(),
-    Ng2SearchPipeModule
+    MyDatePickerModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},

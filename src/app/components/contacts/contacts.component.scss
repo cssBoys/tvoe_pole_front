@@ -1,15 +1,13 @@
-.container{
+.container {
   width: 100%;
   align-items: center;
-  max-height: 470px;
   margin: 20px auto 50px;
-  height: 70vh;
 }
 
-.links{
-  margin-bottom: 20px;
+.links {
+  margin: 0 0 20px 84px;
 }
-a{
+a {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -17,53 +15,59 @@ a{
   text-decoration: none;
 
 }
-a.disabled-link{
+a.disabled-link {
   color: #303030;
   opacity: 0.7;
 }
 a.link{
   color: #303030;
 }
-.contacts-container{
+.contacts-container {
 
 }
 
 .contacts {
-  margin-bottom: 20px;
+  margin: 0 0 20px 84px;
 }
 
-.flex-container{
+.flex-container {
   display: flex;
   background: #FDFDFD;
   box-sizing: border-box;
 }
-.flex-item{
+.flex-item {
   border: 0.5px solid rgba(0, 0, 0, 0.1);
   border-radius: 12px;
 
-  height: 310px;
-
 }
-.flex-item-title{
+.flex-item-title {
   margin: 24px;
 }
-.flex-item-title2{
+.flex-item-title2 {
   margin: 24px 0;
 }
 
-.left{
-  width: 850px;
+.left {
+  width: 830px;
+  margin: 0 auto;
 }
-.right{
+.right {
   width: 270px;
   padding-left: 24px;
   margin-left: 24px;
+  height: 310px;
 }
-.team{
+.team {
   display: inline-flex;
   margin: 0 20px;
+
+  &__img {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+  }
 }
-.place{
+.place {
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -72,40 +76,75 @@ a.link{
   opacity: 0.7;
   margin-bottom: 20px;
 }
-.contacts-label{
+.contacts-label {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
   margin-bottom: 8px;
 }
-.contacts-data{
+.contacts-data, .contacts-email {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
-  /* identical to box height */
-
-
-  /* txt / Black */
-
   color: #303030;
-
   opacity: 0.7;
 }
-.first-icon{
+
+.contacts-email {
+  margin-bottom: 32px;
+}
+
+.first-icon {
   margin-right: 16px;
 }
-.avatar{
+.avatar {
+  margin: 0 auto;
   padding-bottom: 10px;
+  object-fit: cover;
+  border-radius: 50%;
+  max-height: 90px;
 }
 .socials {
   display: flex;
+  flex-direction: column;
+
   img {
-    margin-right: 16px;
+    width: 16px;
+    height: 16px;
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
   }
 }
 
+.items {
+  display: flex;
+  margin-top: 12px;
+
+  img {
+    margin-right: 16px;
+  }margin-bottom: 32px;
+}
+
 .email {
-  margin-bottom: 20px;
+  margin-top: 24px;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.center {
+  text-align: center;
+}
+
+.team:nth-child(-n+3){
+  margin-bottom: 32px;
 }

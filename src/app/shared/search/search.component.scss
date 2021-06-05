@@ -60,6 +60,7 @@ input {
 
 .fields {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0 30px 40px;
 }
@@ -71,14 +72,14 @@ input {
   justify-content: center;
   width: 290px;
   border-radius: 14px;
-  margin-right: 20px;
+  margin: 10px 20px;
   padding: 8px;
   border: 0.5px solid rgba(0, 0, 0, 0.1);
+  max-height: 267px;
 
   .image {
-    height: 220px;
+    height: 100%;
     width: 100%;
-    object-fit: contain;
     border-radius: 14px;
     margin-bottom: 10px;
   }
@@ -106,10 +107,33 @@ input {
     display: flex;
     justify-content: space-between;
 
+    &-address {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 200px;
+    }
+
     span {
       color: #C2C2C2;
       font-size: 12px;
       line-height: 15px;
+    }
+  }
+
+  &__title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 200px;
+  }
+
+  &__rating {
+    display: flex;
+    color: #E8D531;
+
+    img {
+      margin-left: 8px;
     }
   }
 }
@@ -133,8 +157,20 @@ input {
 }
 
 .title {
-  margin: 0 0 20px 32px;
+  margin: 0 0 20px 52px;
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
+}
+
+.asd {
+  width: 100%;
+  height: 200px;
+  background-size: contain;
+  margin-bottom: 10px;
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
 }

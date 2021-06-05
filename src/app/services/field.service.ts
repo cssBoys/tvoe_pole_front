@@ -25,4 +25,8 @@ export class FieldService {
   sendReview(data: ReviewInfo) {
     return this.http.post('http://185.111.106.59/api/review/', data)
   }
+
+  reserve() {
+    return this.http.get('http://185.111.106.59/api/playground/1/watch/?day=2')
+  }
 }
