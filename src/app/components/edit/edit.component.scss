@@ -35,11 +35,7 @@ a.link{
   margin: auto;
   height: 310px;
   width: 360px;
-  /* clrs / White */
-
   background: #FDFDFD;
-  /* strk / Stroke for Frames 0.5 */
-
   border: 0.5px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   border-radius: 12px;
@@ -76,3 +72,59 @@ label{
   font-size: 14px;
   line-height: 20px;
 }
+
+@media screen and (max-width: 360px){
+  .container{
+    max-width: 360px;
+    width: 100%;
+    align-items: center;
+    max-height: 795px;
+    height: 100%;
+    margin: 15px auto;
+  }
+  .links{
+    display: none;
+  }
+
+  .flex-container{
+    display: flex;
+
+    flex-direction: column;
+  }
+  .flex-item{
+    margin-bottom: 20px;
+  }
+  .edit-form{
+    margin: auto;
+    height: 315px;
+    width: 330px;
+
+  }
+  .edit-form-group{
+    margin-left: 16px;
+    margin-top: 16px;
+  }
+  input{
+    border: none;
+    border-bottom: 0.5px solid #303030;
+    width: 298px;
+    font-size: 14px;
+  }
+  button{
+    width: 298px;
+    height: 55px;
+    color: white;
+
+    border-radius: 6px;
+    background: #66D26A;
+  }
+  p{
+    font-family: PT Root UI;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+
+  }
+}
+

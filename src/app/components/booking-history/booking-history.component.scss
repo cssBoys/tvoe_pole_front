@@ -105,3 +105,25 @@ a.link{
   margin-bottom: 9px;
   margin-left: 15px;
 }
+
+
+@media screen and (max-width: 360px){
+  .container{
+    max-width: 360px;
+    width: 100%;
+    align-items: center;
+    max-height: 2000px;
+    height: 100%;
+    margin: 15px auto;
+  }
+  .links{
+    display: none;
+  }
+  .slider{
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .slider-item{
+    margin: 20px 0;
+  }
+}

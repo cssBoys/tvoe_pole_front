@@ -39,3 +39,40 @@ a{
   color: #fff;
   opacity: 0.6;
 }
+
+.footer-mobile{
+  display: none;
+}
+
+@media screen and (max-width: 360px){
+  footer{
+    max-height: 313px;
+    height: 100%;
+    max-width: 360px;
+    width: 100%;
+    align-items: center;
+    border-top-color: gray;
+  }
+  .row{
+    display: none;
+  }
+  .footer-mobile{
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-description{
+    margin-left: 10px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 19px;
+    color: #fff;
+
+    margin-bottom: 10px;
+
+  }
+  .footer-element{
+    margin-left: 10px;
+
+  }
+}

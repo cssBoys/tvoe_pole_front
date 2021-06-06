@@ -105,6 +105,9 @@ td{
 .last-column{
   padding-right: 0px;
 }
+.mobile{
+  display: none;
+}
 .booking-edit{
   width: 149px;
   height: 30px;
@@ -178,4 +181,64 @@ td{
 
 .box {
   margin: auto;
+}
+
+@media screen and (max-width: 360px){
+  .container{
+    height: 100%;
+    max-height: 850px;
+    height: 100%;
+    max-width: 360px;
+    width: 100%;
+    align-items: center;
+    margin: 15px auto;
+  }
+  .links{
+    display: none;
+
+  }
+  .booking-info{
+    width: 330px;
+    background: #FDFDFD;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 12px;
+
+
+  }
+  .flex-container{
+    flex-direction: column;
+  }
+
+  .booking-date{
+    width: 280px;
+    border-bottom: 0.5px solid #303030;
+    margin-bottom: 20px;
+  }
+
+  .date{
+    margin-left: 60px;
+
+  }
+
+  .box{
+    margin-top: 20px;
+  }
+  td{
+    padding-right: 25px;
+  }
+  .mobile{
+    display: unset;
+  }
+  .last-column{
+    display: none;
+  }
+  .booking-reject{
+    width: 133px;
+
+  }
+  .booking-edit{
+    width: 133px;
+
+  }
 }

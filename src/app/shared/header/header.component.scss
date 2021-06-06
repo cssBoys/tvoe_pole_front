@@ -62,3 +62,18 @@ a{
 .arrow {
   margin-left: 8px;
 }
+
+.box-mobile{
+  display: none;
+}
+
+
+@media screen and (max-width: 360px){
+  .box {
+    display: none;
+  }
+  .box-mobile{
+    display: flex;
+  }
+
+}

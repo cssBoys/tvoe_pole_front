@@ -78,3 +78,51 @@ a.disabled-link{
 a.link{
   color: #303030;
 }
+.photo{
+  display: none;
+}
+
+@media screen and (max-width: 360px){
+  .container{
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    max-width: 360px;
+    max-height: 1020px;
+    margin: 15px auto;
+  }
+  .links{
+    display: none;
+  }
+  .wrap {
+    width: 330px;
+    min-height: 8864px;
+    margin: 0 auto;
+
+
+
+    &__container{
+
+      padding: 20px;
+      border: 0.5px solid rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+    }
+  }
+  .add-form {
+
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+  .photo{
+    margin: 20px 0;
+    display: unset;
+    width: 135px;
+    background: #66D26A;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 12px;
+  }
+
+
+}

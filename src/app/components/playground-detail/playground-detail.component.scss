@@ -287,3 +287,60 @@
   color: #fff;
   height: 40px;
 }
+
+@media screen and (max-width: 360px){
+  .container{
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    max-width: 360px;
+    max-height: 1780px;
+    margin: 15px auto;
+  }
+  .info {
+    width: 330px;
+  }
+  .warp {
+    width: 330px;
+  }
+  .reviews{
+    flex-direction: column;
+    &__rating {
+      width: 330px;
+
+
+    }
+
+    &__text {
+      width: 330px;
+
+      &--area {
+        width: 300px;
+
+
+      }
+    }
+
+    .btn {
+      width: 298px;
+
+    }
+  }
+  .all-reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 330px;
+    margin: 15px auto;
+  }
+  .reviews__show {
+    width: 330px;
+
+
+    &-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+  }
+}
